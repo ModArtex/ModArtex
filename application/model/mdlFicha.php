@@ -16,7 +16,7 @@
 		}
 
 		public function __GET($atributo){
-			return $this->atributo;
+			return $this->$atributo;
 		}
 
 		function __construct($db)
@@ -63,8 +63,8 @@
 	        }
 	    }
 
-
 	    public function modificarFicha(){
+	    	
 	        $sql = "UPDATE fichas SET referencia = ?, color = ?, stock_min = ?, fecha_reg = ?, valor_produccion = ?, valor_producto = ?, estado = ? WHERE codigo = ?";
 
 	        try{

@@ -62,17 +62,15 @@
                       <td><?= $ficha["valor_producto"] ?></td>
                       <td class="estado"><?= $ficha["estado"]==1?"Habilitado":"Inhabilitado" ?></td>
                       <td>
-                      <!--<a href="#" onclick="editar('<?= $ficha["codigo"] ?>', this)">Editar</a> -->
                         <button type="button" class="btn btn-box-tool" data-toggle="modal" data-target="#idModal" onclick="editar('<?= $ficha["codigo"] ?>', this)"><i class="fa fa-pencil-square-o"></i></button>
-                        <!-- <button type="button" class="btn btn-box-tool"><i class="fa fa-minus-circle"></i></button> -->
+                        
                         <?php if ($ficha["estado"] == 1){ ?>
                       
-                      <a href="" onclick="cambiarEstadoFicha(<?= $ficha['codigo'] ?>, 0)">Inhabilitar</a>
+                      <button type="button" class="btn btn-box-tool" onclick="cambiarEstadoFicha(<?= $ficha['codigo'] ?>, 0)"><i class="fa fa-minus-circle"></i></button>
                           
                           <?php }else{ ?>
+                      <button type="button" class="btn btn-box-tool" onclick="cambiarEstadoFicha(<?= $ficha['codigo'] ?>, 1)"><i class="fa fa-check"></i></button>
 
-                      <a href="" onclick="cambiarEstadoFicha('<?= $ficha["codigo"] ?>', 1)">Habilitar</a>
-                          
                           <?php } ?>
                       </td>
                     </tr>

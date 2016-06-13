@@ -20,7 +20,7 @@
 	<!-- AdminLTE App -->
 	<script src="<?php echo URL; ?>js/app.min.js"></script>
     <!-- our JavaScript -->
-    <script src="<?php echo URL; ?>js/application.js"></script>
+    
     <!-- SlimScroll -->
     <script src="<?php echo URL; ?>plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
@@ -119,5 +119,7 @@
             });
         });
       </script>
+
+      <script src="<?php echo URL; ?>js/application.js"></script>
 </body>
 </html>

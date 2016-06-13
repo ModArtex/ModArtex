@@ -14,13 +14,14 @@
 	    {
 	    	$mensaje = "";
 	    	$mensaje2 = "";
+
+	    	
 	    	$fichas = $this->mdlModel->getFichas();
 
 	        require APP . 'view/_templates/header.php';
 	        require APP . 'view/ficha/consFicha.php';
 	        require APP . 'view/_templates/footer.php';
 	    }
-
 
 	    public function regFicha()
 	    {
@@ -95,16 +96,18 @@
 		    $mensaje2 = "";
 		    $this->mdlModel->__SET("codigo", $_POST["codigo"]);
 	        $this->mdlModel->__SET("estado", $_POST["estado"]);
+
 		    $fichas = $this->mdlModel->cambiarEstado();
+
 		    if ($fichas) {
 		    	echo json_encode(["v"=>1]);
 		    }else{
 		    	echo json_encode(["v"=>0]);
 		    }
 		    
-		 //require APP . 'view/_templates/header.php';
-	     //require APP . 'view/ficha/consFicha.php';
-	     //require APP . 'view/_templates/footer.php';
+	 //     require APP . 'view/_templates/header.php';
+	 //    require APP . 'view/ficha/consFicha.php';
+	 //    require APP . 'view/_templates/footer.php';
 		}
 	}
 ?>

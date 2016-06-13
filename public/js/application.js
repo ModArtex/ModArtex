@@ -4,12 +4,12 @@
         $.ajax({
             dataType: 'json',
             type: 'post',
-            url: uri+"ficha/consFicha",
+            url: uri+"ficha/cambiarEstado",
             data: {codigo:cod, estado:est}
         }).done(function(respuesta){
             if (respuesta.v == "1") {
                 alert ("si");
-                // location.href = uri+"ficha/consFicha";
+                location.href = uri+"ficha/consFicha";
             }else{
                 alert("no");
             }
@@ -53,5 +53,3 @@
     //             });
     //     });
     // }
-
-});
