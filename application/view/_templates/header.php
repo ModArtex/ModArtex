@@ -205,24 +205,23 @@ desired effect
           <!-- Optionally, you can add icons to the links -->
           <li class="active"><a href="<?php echo URL ?>home/index"><i class="fa fa-dashboard"></i><span>Inicio</span></a></li>
      
-      <!-- <li class="treeview">
+      <li class="treeview">
             <a href="#"><i class="fa fa-user"></i> <span>Usuario</span>  <i class="fa fa-angle-left pull-right"></i>
             <ul class="treeview-menu">
               <li><a href="<?php echo URL ?>usuario/regUsuario"><i class="fa fa-circle-o"></i>Registrar Usuarios</a></li>
               <li><a href="<?php echo URL ?>usuario/consUsuario"><i class="fa fa-circle-o"></i>Listar Usuarios</a></li>
-              <li><a href="<?php echo URL ?>cancion/index"><i class="fa fa-circle-o"></i>Cancion</a></li>
             </ul>
           </li>
        
 
-      <li class="treeview">
+     <!--  <li class="treeview">
             <a href="#"><i class="fa fa-truck"></i> <span>Bodega</span> <i class="fa fa-angle-left pull-right"></i></a>
             <ul class="treeview-menu">
               <li><a href="mods/bodega/regInsumo.html"><i class="fa fa-circle-o"></i>Registrar Insumo</a></li>
               <li><a href="mods/bodega/consInsumo.html"><i class="fa fa-circle-o"></i>Listar insumos</a></li>
               <li><a href="mods/bodega/existencias.html"><i class="fa fa-circle-o"></i>Existencias Insumos</a></li>
             </ul>
-          </li>  -->
+          </li> 
           <li class="treeview">
             <a href="#"><i class="fa fa-puzzle-piece"></i> <span>Ficha Técnica</span> <i class="fa fa-angle-left pull-right"></i></a>
             <ul class="treeview-menu">
@@ -232,7 +231,7 @@ desired effect
           </li>
      
 
-
+ -->
 
         <!-- <li class="treeview">
             <a href="#"><i class="fa fa-users"></i> <span>Cliente</span> <i class="fa fa-angle-left pull-right"></i></a>

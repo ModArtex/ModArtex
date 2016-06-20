@@ -40,41 +40,50 @@
                <div class="table-responsive"> 
                 <table class="table">
                   <thead>
-                   <tr class="active">
+                   <tr class="list">
                     <th>Codigo</th>
+                    <th>tipo_Documento</th>
                     <th>Documento</th>
-                    <th>Nombre de usuario</th>
-                    <th>Rol</th>
                     <th>Estado</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Nombre de usuario</th>
+                    <th>Clave</th>
+                    <th>email</th>
+                    <th>Rol</th>
                     <th style="width: 7%">Opcion</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <script type="text/javascript">
-                        function botonHabilitar(){
-                          alert("Registro habilitado exitosamente");
-                        }
-                        function botonDeshabilitar(){
-                          confirm("¿Esta seguro que desea inhabilitar el registro?");
-                        }
-                     </script>
-                    <?php foreach ($usuarios as $usuario) { ?>
+                  <?php foreach ($usuarios as $usuario): ?>
                     <tr>
-                      <td><?php if (isset($usuario->codigo)) echo htmlspecialchars($usuario->codigo, ENT_QUOTES, 'UTF-8'); ?></td>
-                      <td><?php if (isset($usuario->documento)) echo htmlspecialchars($usuario->documento, ENT_QUOTES, 'UTF-8'); ?></td>
-                      <td><?php if (isset($usuario->nombre_usuario)) echo htmlspecialchars($usuario->nombre_usuario, ENT_QUOTES, 'UTF-8'); ?></td>
-                      <td><?php if (isset($usuario->rol)) echo htmlspecialchars($usuario->rol, ENT_QUOTES, 'UTF-8'); ?></td>
-                      <td><?php if (isset($usuario->estado)) echo htmlspecialchars($usuario->estado, ENT_QUOTES, 'UTF-8'); ?></td>
+                      <td><?= $usuario["codigo"] ?></td>
+                      <td class="tipo_Documento"><?= $usuario["tipo_Documento"] ?></td>
+                      <td class="documento"><?= $usuario["documento"] ?></td>
+                      <td class="estado"><?= $usuario["estado"] ?></td>
+                      <td class="nombre"><?= $usuario["nombre"] ?></td>
+                      <td class="apellido"><?= $usuario["apellido"] ?></td>
+                      <td class="nombre_Usuario"><?= $usuario["nombre_Usuario"] ?></td>
+                      <td class="clave"><?= $usuario["clave"] ?></td>
+                      <td class="email"><?= $usuario["email"] ?></td>
+                      <td class="rol"><?= $usuario["rol"] ?></td>
+               <!--        <td class="estado"><?= $ficha["estado"]==1?"Habilitado":"Inhabilitado" ?></td> -->
                       <td>
-                      <button type="button" class="btn btn-box-tool" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o"></i></button>
-                      <button type="button"  onclick="botonDeshabilitar()" class="btn btn-box-tool"><i class="fa fa-minus-circle"></i></button>
+                      <!--<a href="#" onclick="editar('<?= $ficha["codigo"] ?>', this)">Editar</a> -->
+                        <button type="button" class="btn btn-box-tool" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o"></i></button>
+                        <button type="button" class="btn btn-box-tool"><i class="fa fa-minus-circle"></i></button>
+                  <!--       <?php if ($ficha["estado"] == 1){ ?>
+                      
+                      <a href="" onclick="cambiarEstadoFicha(<?= $ficha['codigo'] ?>, 0)">Inhabilitar</a>
+                          
+                          <?php }else{ ?>
+
+                      <a href="" onclick="cambiarEstadoFicha('<?= $ficha["codigo"] ?>', 1)">Habilitar</a>
+                          
+                          <?php } ?> -->
                       </td>
                     </tr>
-                    <?php } ?>
-                    <!-- <td>
-                      <button type="button" class="btn btn-box-tool"><i class="fa fa-pencil-square-o"></i></button>
-                      <button type="button" onclick="botonHabilitar()" class="btn btn-box-tool"><i class="fa fa-check"></i></button>
-                    </td> -->
+                  <?php endforeach; ?>
                 </tbody>
                 </table>
                </div>
